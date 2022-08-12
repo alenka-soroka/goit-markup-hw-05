@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
-  <body>
+  <body data-page>
     <!--header section-->
 
     <header class="header">
@@ -85,7 +85,7 @@
             для вашего бизнеса
           </h1>
 
-          <button class="btn darc-btn" type="button">Заказать услугу</button>
+          <button class="btn darc-btn" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -153,31 +153,46 @@
           <h2 class="about-uppertitle">Чем мы занимаемся</h2>
           <ul class="about-list list">
             <li class="about-item">
-              <img
-                class="about-img"
-                src="./images/about/сoding.jpg"
-                alt="Программист за своим ПК"
-                width="370"
-                height="294"
-              />
+              <div class="photo-list">
+                <img
+                  class="about-img"
+                  src="./images/about/сoding.jpg"
+                  alt="Программист за своим ПК"
+                  width="370"
+                  height="294"
+                />
+                <div class="photo-list-actions">
+                  <p class="photo-text">Десктопные приложения</p>
+                </div>
+              </div>
             </li>
             <li class="about-item">
-              <img
-                class="about-img"
-                src="./images/about/design.jpg"
-                alt="Разробка мобильного приложения"
-                width="370"
-                height="294"
-              />
+              <div class="photo-list">
+                <img
+                  class="about-img"
+                  src="./images/about/design.jpg"
+                  alt="Разробка мобильного приложения"
+                  width="370"
+                  height="294"
+                />
+                <div class="photo-list-actions">
+                  <p class="photo-text">Мобильные приложения</p>
+                </div>
+              </div>
             </li>
             <li class="about-item">
-              <img
-                class="about-img"
-                src="./images/about/decoration.jpg"
-                alt="Палитра на планшети"
-                width="370"
-                height="294"
-              />
+              <div class="photo-list">
+                <img
+                  class="about-img"
+                  src="./images/about/decoration.jpg"
+                  alt="Палитра на планшети"
+                  width="370"
+                  height="294"
+                />
+                <div class="photo-list-actions">
+                  <p class="photo-text">Дизайнерские решения</p>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
@@ -624,5 +639,18 @@
         </div>
       </div>
     </footer>
+
+    <!--modal window-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" data-modal-close>
+          <svg class="modal-btn-icon" width="11" height="11">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
